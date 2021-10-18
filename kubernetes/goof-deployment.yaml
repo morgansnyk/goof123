@@ -15,7 +15,7 @@ spec:
         app: goof
     spec:
       containers:
-      - image: michaelbraunbass/goof
+      - image: michaelbraunbass/goof:latest
         imagePullPolicy: Always
         name: goof
         ports:
