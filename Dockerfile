@@ -10,10 +10,12 @@ COPY . /usr/src/goof
 WORKDIR /usr/src/goof
 
 RUN /bin/sh -c apt-get install -y imagemagick
-
+RUN npm install --production --unsafe-perm
+RUN npm dedupe
 
 RUN npm update
 RUN npm install
 EXPOSE 3001
 EXPOSE 9229
+EXPOSE 3000
 ENTRYPOINT ["npm", "start"]
