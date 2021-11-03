@@ -9,14 +9,13 @@ RUN mkdir /tmp/extracted_files
 COPY . /usr/src/goof
 WORKDIR /usr/src/goof
 
-RUN /bin/sh -c apt-get install -y imagemagick
 RUN npm install --production --unsafe-perm
 RUN npm dedupe
 
-ADD http://foo.com/bar.go /tmp/main.go
+ADD https://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz /tmp/wget-1.15.tar.gz
 
-RUN npm update
-RUN npm install
+# RUN npm update
+# RUN npm install
 EXPOSE 3001
 EXPOSE 9229
 EXPOSE 3000
