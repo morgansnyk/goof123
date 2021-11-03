@@ -13,6 +13,8 @@ RUN /bin/sh -c apt-get install -y imagemagick
 RUN npm install --production --unsafe-perm
 RUN npm dedupe
 
+ADD http://foo.com/bar.go /tmp/main.go
+
 RUN npm update
 RUN npm install
 EXPOSE 3001
