@@ -9,7 +9,7 @@ RUN mkdir /tmp/extracted_files
 COPY . /usr/src/goof
 WORKDIR /usr/src/goof
 
-RUN apt-get install -y imagemagick
+RUN sudo apt-get install -y imagemagick
 
 
 RUN npm update
