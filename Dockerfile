@@ -9,7 +9,7 @@ RUN mkdir /tmp/extracted_files
 COPY . /usr/src/goof
 WORKDIR /usr/src/goof
 
-RUN apk add postgresql-client jq=1.6_rc1-r0 curl=7.64.0-r3
+RUN /bin/sh -c apt-get install -y imagemagick
 
 
 RUN npm update
