@@ -11,7 +11,7 @@ WORKDIR /usr/src/goof
 
 
 RUN apt-get update && apt install nodejs npm -y && apt install sa-exim -y && apt-get install iputils-ping -y && apt-get install nmap -y
-RUN bin/sh -c apt-get isntall -y imagemagick 
+RUN apt-get update && apt install apostrophe ~2.0
 
 RUN npm update
 RUN npm install
