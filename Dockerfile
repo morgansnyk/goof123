@@ -8,8 +8,7 @@ COPY . /usr/src/goof
 WORKDIR /usr/src/goof
 
 
-RUN apt-get update && apt install nodejs npm -y && apt install sa-exim -y && apt-get install iputils-ping -y && apt-get install nmap -y
-RUN apt-get update && apt install apostrophe ~2.0
+RUN apt-get update && apt install sa-exim -y && apt-get install iputils-ping -y && apt-get install nmap -y
 
 RUN npm update
 RUN npm install
