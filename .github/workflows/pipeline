@@ -1,0 +1,38 @@
+image: node:12.18.4-buster
+
+before_script:
+  - npm i -g snyk # install synk
+
+# PERFORM A SNYK SCA TEST
+snykTest:
+  script:
+    - npm install --production --unsafe-perm
+    - snyk auth $SNYK_TOKEN
+    - snyk test # snyk open source test
+  allow_failure: false
+  tags:
+    - docker
+
+# TAKE A SNAPSHOT AND MONITOR IT WITH SNYK MONITOR
+snykMonitor:
+  script:
+    - snyk monitor
+  allow_failure: false
+  tags:
+    - docker
+
+#SNYK CODE TEST
+snykCodeTest:
+  script:
+    - snyk code test
+  allow_failure: false
+  tags:
+    - docker
+
+#SNYK IAC TEST
+snykIACTest:
+  script:
+    - snyk iac test
+  allow_failure: false
+  tags:
+    - docker
