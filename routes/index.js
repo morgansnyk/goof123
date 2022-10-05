@@ -76,7 +76,7 @@ function parse(todo) {
 
 exports.create = function (req, res, next) {
   // console.log('req.body: ' + JSON.stringify(req.body));
-
+  const rateLimit = require("express-rate-limit");
   var item = req.body.content;
   var imgRegex = /\!\[alt text\]\((http.*)\s\".*/;
   if (typeof (item) == 'string' && item.match(imgRegex)) {

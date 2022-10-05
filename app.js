@@ -61,7 +61,7 @@ app.use('/users', routesUsers)
 // Static
 app.use(st({ path: './public', url: '/public' }));
 
-// Add the option to output (sanitized!) markdown
+// Add the option to output (sanzitized!) markdown
 marked.setOptions({ sanitize: true });
 app.locals.marked = marked;
 
