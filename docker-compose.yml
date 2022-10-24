@@ -2,7 +2,7 @@ version: "2"
 services:
   goof:
     build: .
-    container_name: morganls23/goof:latest
+    container_name: morganls23/goof:1.0
     environment:
       - DOCKER=1
     ports:
