@@ -24,8 +24,8 @@ var dust = require('dustjs-linkedin');
 var dustHelpers = require('dustjs-helpers');
 var cons = require('consolidate');
 
-//fix for vuln
-//var app = express();
+
+var app = express();
 var app = express.Router();
 var routes = require('./routes');
 var routesUsers = require('./routes/users.js')
