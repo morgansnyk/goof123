@@ -1,5 +1,5 @@
 # FROM node:6-stretch
-FROM morganls23/goof:1.12.1
+FROM morganls23/goof:2.2.5
 
 
 RUN mkdir /usr/src/goof
