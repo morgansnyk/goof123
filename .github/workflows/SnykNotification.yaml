@@ -1,4 +1,4 @@
-name: "Snyk Notify GH Action"
+name: "Snyk Notify GH Action 2"
 
 on:
   push:
@@ -13,11 +13,14 @@ jobs:
   dump_contexts_to_log:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull request sha
+      - name: Dump GitHub context
         env:
-          GITHUB_CONTEXT: ${{ github.event.pull_request.base.sha }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
 
-      - name: Testing Action
-        run: echo "Hello world"
+      - name: Get Sha
+        env:
+          SHA: github.event.workflow_run.head_sha
+        run: echo "$SHA"
+
 
