@@ -18,3 +18,6 @@ jobs:
           GITHUB_CONTEXT: ${{ github.event.pull_request.base.sha }}
         run: echo "$GITHUB_CONTEXT"
 
+      - name: Testing Action
+        run: echo "Hello world"
+
