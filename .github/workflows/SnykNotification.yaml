@@ -20,7 +20,7 @@ jobs:
 
       - name: Get Sha
         env:
-          SHA: ${{ github.event.workflow_run.head_sha }}
+          SHA: ${GITHUB_SHA}
         run: echo "$SHA"
 
 
