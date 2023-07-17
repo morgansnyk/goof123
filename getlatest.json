@@ -1,0 +1,537 @@
+{
+    "results": [
+        {
+            "issue": {
+                "id": "npm:adm-zip:20180415",
+                "title": "Arbitrary File Write via Archive Extraction (Zip Slip)",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/npm:adm-zip:20180415",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2018-1002204"
+                    ],
+                    "CWE": [
+                        "CWE-29"
+                    ]
+                },
+                "severity": "critical",
+                "effectiveSeverityLevel": 3,
+                "originalSeverity": null,
+                "priorityScore": 899,
+                "exploitMaturityLevel": 3,
+                "exploitMaturity": "mature",
+                "package": "adm-zip",
+                "version": "0.4.7"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "npm:adm-zip:20180415"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-QS-3153490",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-QS-3153490",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2022-24999"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 768,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "qs",
+                "version": "2.4.2"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-QS-3153490"
+        },
+        {
+            "issue": {
+                "id": "npm:npmconf:20180512",
+                "title": "Uninitialized Memory Exposure",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/npm:npmconf:20180512",
+                "identifiers": {
+                    "CVE": [],
+                    "CWE": [
+                        "CWE-201"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 756,
+                "exploitMaturityLevel": 3,
+                "exploitMaturity": "mature",
+                "package": "npmconf",
+                "version": "0.0.24"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "npm:npmconf:20180512"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-DUSTJSLINKEDIN-1089257",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-DUSTJSLINKEDIN-1089257",
+                "identifiers": {
+                    "CVE": [],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 751,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "dustjs-linkedin",
+                "version": "2.5.0"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-DUSTJSLINKEDIN-1089257"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-LODASH-567746",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-LODASH-567746",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2020-8203"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 731,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "lodash",
+                "version": "4.17.4"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-LODASH-567746"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-EJS-2803307",
+                "title": "Remote Code Execution (RCE)",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-EJS-2803307",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2022-29078"
+                    ],
+                    "CWE": [
+                        "CWE-94"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 726,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "ejs",
+                "version": "1.0.0"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-EJS-2803307"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-JQUERY-567880",
+                "title": "Cross-site Scripting (XSS)",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-JQUERY-567880",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2020-11022"
+                    ],
+                    "CWE": [
+                        "CWE-79"
+                    ]
+                },
+                "severity": "medium",
+                "effectiveSeverityLevel": 1,
+                "originalSeverity": null,
+                "priorityScore": 711,
+                "exploitMaturityLevel": 3,
+                "exploitMaturity": "mature",
+                "package": "jquery",
+                "version": "2.2.4"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-JQUERY-567880"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-JQUERY-565129",
+                "title": "Cross-site Scripting (XSS)",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-JQUERY-565129",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2020-11023"
+                    ],
+                    "CWE": [
+                        "CWE-79"
+                    ]
+                },
+                "severity": "medium",
+                "effectiveSeverityLevel": 1,
+                "originalSeverity": null,
+                "priorityScore": 701,
+                "exploitMaturityLevel": 3,
+                "exploitMaturity": "mature",
+                "package": "jquery",
+                "version": "2.2.4"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-JQUERY-565129"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-MQUERY-1089718",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-MQUERY-1089718",
+                "identifiers": {
+                    "CVE": [],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 696,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "mquery",
+                "version": "1.6.3"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-MQUERY-1089718"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-EXPRESSFILEUPLOAD-595969",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-EXPRESSFILEUPLOAD-595969",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2020-7699"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 696,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "express-fileupload",
+                "version": "0.0.5"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-EXPRESSFILEUPLOAD-595969"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-ANSIREGEX-1583908",
+                "title": "Regular Expression Denial of Service (ReDoS)",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-ANSIREGEX-1583908",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2021-3807"
+                    ],
+                    "CWE": [
+                        "CWE-400"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 696,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "ansi-regex",
+                "version": "3.0.0"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-ANSIREGEX-1583908"
+        },
+        {
+            "issue": {
+                "id": "npm:marked:20180225",
+                "title": "Regular Expression Denial of Service (ReDoS)",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/npm:marked:20180225",
+                "identifiers": {
+                    "CVE": [],
+                    "CWE": [
+                        "CWE-185",
+                        "CWE-400"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 696,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "marked",
+                "version": "0.3.5"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "npm:marked:20180225"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-LODASH-450202",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-LODASH-450202",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2019-10744"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 686,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "lodash",
+                "version": "4.17.4"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-LODASH-450202"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-LODASH-73638",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-LODASH-73638",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2018-16487"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 686,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "lodash",
+                "version": "4.17.4"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-LODASH-73638"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-MQUERY-1050858",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-MQUERY-1050858",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2020-35149"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 686,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "mquery",
+                "version": "1.6.3"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-MQUERY-1050858"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-INI-1048974",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-INI-1048974",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2020-7788"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 686,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "ini",
+                "version": "1.1.0"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-INI-1048974"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-LODASH-608086",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-LODASH-608086",
+                "identifiers": {
+                    "CVE": [],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 686,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "lodash",
+                "version": "4.17.4"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-LODASH-608086"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-LODASH-1040724",
+                "title": "Command Injection",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-LODASH-1040724",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2021-23337"
+                    ],
+                    "CWE": [
+                        "CWE-78"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 681,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "lodash",
+                "version": "4.17.4"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-LODASH-1040724"
+        },
+        {
+            "issue": {
+                "id": "SNYK-JS-MONGOOSE-2961688",
+                "title": "Prototype Pollution",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/SNYK-JS-MONGOOSE-2961688",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2022-2564",
+                        "CVE-2022-24304"
+                    ],
+                    "CWE": [
+                        "CWE-1321"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 671,
+                "exploitMaturityLevel": 2,
+                "exploitMaturity": "proof-of-concept",
+                "package": "mongoose",
+                "version": "4.2.5"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "SNYK-JS-MONGOOSE-2961688"
+        },
+        {
+            "issue": {
+                "id": "npm:marked:20150520",
+                "title": "Cross-site Scripting (XSS)",
+                "type": "vuln",
+                "url": "https://security.snyk.io/vuln/npm:marked:20150520",
+                "identifiers": {
+                    "CVE": [
+                        "CVE-2016-10531"
+                    ],
+                    "CWE": [
+                        "CWE-79"
+                    ]
+                },
+                "severity": "high",
+                "effectiveSeverityLevel": 2,
+                "originalSeverity": null,
+                "priorityScore": 654,
+                "exploitMaturityLevel": 1,
+                "exploitMaturity": "no-known-exploit",
+                "package": "marked",
+                "version": "0.3.5"
+            },
+            "projectsCounts": "1",
+            "packageManager": "npm",
+            "groupBy": "npm:marked:20150520"
+        }
+    ],
+    "total": 94
+}

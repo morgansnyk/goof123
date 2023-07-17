@@ -1,0 +1,23 @@
+name: "Snyk Notify GH Action"
+
+on:
+  push:
+    branches:
+      # update to master branch
+      - master
+    pull_request:
+      branches:
+       - master
+
+jobs:
+  dump_contexts_to_log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull request sha
+        env:
+          GITHUB_CONTEXT: ${{ github.event.pull_request.base.sha }}
+        run: echo "$GITHUB_CONTEXT"
+
+      - name: Testing Action
+        run: echo "Hello world"
+
