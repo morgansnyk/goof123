@@ -525,7 +525,7 @@
           </svg>
         </a>
         <div class="test-meta">
-          <p class="timestamp">October 26th 2022, 5:36:48 pm</p>
+          <p class="timestamp">May 31st 2023, 2:40:51 pm</p>
           <div class="filepath" title="/Users/morgansmith/Documents/GitHub/goof">Source: /Users/morgansmith/Documents/GitHub/goof</div>
         </div>
       </div>
@@ -551,7 +551,7 @@
         <div class="source-panel">
           <span class="source-panel__heading">Scan Coverage</span>
           <ul class="scan-coverage">
-            <li class="type">XML files: <strong>6</strong></li><li class="type">JavaScript files: <strong>9</strong></li><li class="type">HTML files: <strong>2</strong></li><li class="type">EJS files: <strong>4</strong></li>
+            <li class="type">JavaScript files: <strong>8</strong></li><li class="type">EJS files: <strong>1</strong></li><li class="type">XML files: <strong>6</strong></li><li class="type">EJS files: <strong>3</strong></li><li class="type">HTML files: <strong>1</strong></li>
           </ul>            
         </div>
       </div>
@@ -580,38 +580,45 @@
                       <h2 class="card__panel__heading"><span class="heading-char">⇣</span> Data Flow</h2>
                       <div class="dataflow__filename"> routes/index.js</div>
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">39:25</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find({ username: <br /></span><span class="marker">req.body</span><span class="dataflow__codesuffix">.username, password: req.body.password }, function (err, users) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">39:29</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find({ username: req.<br /></span><span class="marker">body.</span><span class="dataflow__codesuffix">username, password: req.body.password }, function (err, users) {</span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span>
                           <span class="dataflow__step">0</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">39:25</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find({ username: <br /></span><span class="marker">req.body</span><span class="dataflow__codesuffix">.username, password: req.body.password }, function (err, users) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">39:29</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find({ username: req.<br /></span><span class="marker">body.</span><span class="dataflow__codesuffix">username, password: req.body.password }, function (err, users) {</span></div>
                           
                           <span class="dataflow__step">1</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">39:15</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find({ <br /></span><span class="marker">username</span><span class="dataflow__codesuffix">: req.body.username, password: req.body.password }, function (err, users) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">39:25</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find({ username: <br /></span><span class="marker">req.body.</span><span class="dataflow__codesuffix">username, password: req.body.password }, function (err, users) {</span></div>
                           
                           <span class="dataflow__step">2</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">39:13</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find(<br /></span><span class="marker">{ username: req.body.username, password: req.body.password }</span><span class="dataflow__codesuffix">, function (err, users) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">39:15</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find({ <br /></span><span class="marker">username:</span><span class="dataflow__codesuffix"> req.body.username, password: req.body.password }, function (err, users) {</span></div>
                           
                           <span class="dataflow__step">3</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">39:3</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  <br /></span><span class="marker">User.find</span><span class="dataflow__codesuffix">({ username: req.body.username, password: req.body.password }, function (err, users) {</span></div>
-                          <span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
+                          <span class="dataflow__lineno" title="line:column">39:13</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.find(<br /></span><span class="marker">{ username: req.body.username, password: req.body.password },</span><span class="dataflow__codesuffix"> function (err, users) {</span></div>
+                          
                           <span class="dataflow__step">4</span>
+                      </div>
+                      
+                      <div class="dataflow__item">
+                          <span class="dataflow__lineno" title="line:column">39:8</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  User.<br /></span><span class="marker">find(</span><span class="dataflow__codesuffix">{ username: req.body.username, password: req.body.password }, function (err, users) {</span></div>
+                          <span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
+                          <span class="dataflow__step">5</span>
                       </div>
                   </div>
                   <div class="card__panel fix-analysis">
@@ -646,31 +653,38 @@
                       <h2 class="card__panel__heading"><span class="heading-char">⇣</span> Data Flow</h2>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">116:17</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params</span><span class="dataflow__codesuffix">.id, function (err, todo) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">116:21</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(req.<br /></span><span class="marker">params.</span><span class="dataflow__codesuffix">id, function (err, todo) {</span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span>
                           <span class="dataflow__step">0</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">116:17</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params</span><span class="dataflow__codesuffix">.id, function (err, todo) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">116:21</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(req.<br /></span><span class="marker">params.</span><span class="dataflow__codesuffix">id, function (err, todo) {</span></div>
                           
                           <span class="dataflow__step">1</span>
                       </div>
                       
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">116:17</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params.id</span><span class="dataflow__codesuffix">, function (err, todo) {</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params.</span><span class="dataflow__codesuffix">id, function (err, todo) {</span></div>
                           
                           <span class="dataflow__step">2</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">116:3</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  <br /></span><span class="marker">Todo.findById</span><span class="dataflow__codesuffix">(req.params.id, function (err, todo) {</span></div>
-                          <span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
+                          <span class="dataflow__lineno" title="line:column">116:17</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params.id,</span><span class="dataflow__codesuffix"> function (err, todo) {</span></div>
+                          
                           <span class="dataflow__step">3</span>
+                      </div>
+                      
+                      <div class="dataflow__item">
+                          <span class="dataflow__lineno" title="line:column">116:8</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.<br /></span><span class="marker">findById(</span><span class="dataflow__codesuffix">req.params.id, function (err, todo) {</span></div>
+                          <span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
+                          <span class="dataflow__step">4</span>
                       </div>
                   </div>
                   <div class="card__panel fix-analysis">
@@ -705,31 +719,38 @@
                       <h2 class="card__panel__heading"><span class="heading-char">⇣</span> Data Flow</h2>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">144:17</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params</span><span class="dataflow__codesuffix">.id, function (err, todo) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">144:21</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(req.<br /></span><span class="marker">params.</span><span class="dataflow__codesuffix">id, function (err, todo) {</span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span>
                           <span class="dataflow__step">0</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">144:17</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params</span><span class="dataflow__codesuffix">.id, function (err, todo) {</span></div>
+                          <span class="dataflow__lineno" title="line:column">144:21</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(req.<br /></span><span class="marker">params.</span><span class="dataflow__codesuffix">id, function (err, todo) {</span></div>
                           
                           <span class="dataflow__step">1</span>
                       </div>
                       
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">144:17</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params.id</span><span class="dataflow__codesuffix">, function (err, todo) {</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params.</span><span class="dataflow__codesuffix">id, function (err, todo) {</span></div>
                           
                           <span class="dataflow__step">2</span>
                       </div>
                       
                       <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">144:3</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">  <br /></span><span class="marker">Todo.findById</span><span class="dataflow__codesuffix">(req.params.id, function (err, todo) {</span></div>
-                          <span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
+                          <span class="dataflow__lineno" title="line:column">144:17</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.findById(<br /></span><span class="marker">req.params.id,</span><span class="dataflow__codesuffix"> function (err, todo) {</span></div>
+                          
                           <span class="dataflow__step">3</span>
+                      </div>
+                      
+                      <div class="dataflow__item">
+                          <span class="dataflow__lineno" title="line:column">144:8</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">  Todo.<br /></span><span class="marker">findById(</span><span class="dataflow__codesuffix">req.params.id, function (err, todo) {</span></div>
+                          <span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
+                          <span class="dataflow__step">4</span>
                       </div>
                   </div>
                   <div class="card__panel fix-analysis">
@@ -765,14 +786,14 @@
                       
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">75:13</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">var token &#x3D; <br /></span><span class="marker">&#x27;SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9&#x27;</span><span class="dataflow__codesuffix">;</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">var token &#x3D; <br /></span><span class="marker">&#x27;SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9&#x27;;</span><span class="dataflow__codesuffix"></span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span>
                           <span class="dataflow__step">0</span>
                       </div>
                       
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">75:5</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">var <br /></span><span class="marker">token</span><span class="dataflow__codesuffix"> &#x3D; &#x27;SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9&#x27;;</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">var <br /></span><span class="marker">token </span><span class="dataflow__codesuffix">&#x3D; &#x27;SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9&#x27;;</span></div>
                           <span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
                           <span class="dataflow__step">1</span>
                       </div>
@@ -817,7 +838,7 @@
                       <div class="dataflow__filename"> typeorm-db.js</div>
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">6:1</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">typeorm.createConnection</span><span class="dataflow__codesuffix">({</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">typeorm.createConnection(</span><span class="dataflow__codesuffix">{</span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span><span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
                           <span class="dataflow__step">0</span>
                       </div>
@@ -864,7 +885,7 @@
                       <div class="dataflow__filename"> app.js</div>
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">78:1</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">http.createServer(app)</span><span class="dataflow__codesuffix">.listen(app.get(&#x27;port&#x27;), function () {</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">http.createServer(</span><span class="dataflow__codesuffix">app).listen(app.get(&#x27;port&#x27;), function () {</span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span><span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
                           <span class="dataflow__step">0</span>
                       </div>
@@ -910,7 +931,7 @@
                       <div class="dataflow__filename"> typeorm-db.js</div>
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">6:1</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">typeorm.createConnection</span><span class="dataflow__codesuffix">({</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">typeorm.createConnection(</span><span class="dataflow__codesuffix">{</span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span><span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
                           <span class="dataflow__step">0</span>
                       </div>
@@ -957,7 +978,7 @@
                       <div class="dataflow__filename"> mongoose-db.js</div>
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">52:35</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix">    new User({ username: &#x27;admin&#x27;, <br /></span><span class="marker">password</span><span class="dataflow__codesuffix">: &#x27;SuperSecretPassword&#x27; }).save(function (err, user, count) {</span></div>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix">    new User({ username: &#x27;admin&#x27;, <br /></span><span class="marker">password:</span><span class="dataflow__codesuffix"> &#x27;SuperSecretPassword&#x27; }).save(function (err, user, count) {</span></div>
                           <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span><span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
                           <span class="dataflow__step">0</span>
                       </div>
