@@ -47,7 +47,7 @@
     "typeorm": "^0.2.24",
     "vm2": "^3.9.5",
     "matrix-js-sdk": "12.3.1",
-    "nunjucks":  "2.2.0"
+    "nunjucks":  "3.2.4"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
