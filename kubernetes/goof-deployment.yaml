@@ -15,7 +15,7 @@ spec:
         app: goof
     spec:
       containers:
-      - image: michaelbraunbass/goof
+      - image: morganls23/goof
         imagePullPolicy: Always
         name: goof
         ports:
@@ -37,4 +37,4 @@ spec:
      targetPort: 3001
   selector:
     app: goof
-  type: LoadBalancer
+  type: ClusterIP

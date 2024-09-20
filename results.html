@@ -525,7 +525,7 @@
           </svg>
         </a>
         <div class="test-meta">
-          <p class="timestamp">May 31st 2023, 2:40:51 pm</p>
+          <p class="timestamp">May 22nd 2024, 2:49:59 pm</p>
           <div class="filepath" title="/Users/morgansmith/Documents/GitHub/goof">Source: /Users/morgansmith/Documents/GitHub/goof</div>
         </div>
       </div>
@@ -541,17 +541,17 @@
               <span class="severity-icon severity-icon--high"></span> <span><strong>4</strong> high issues</span>
             </div>
             <div class="meta-count">
-              <span class="severity-icon severity-icon--medium"></span> <span><strong>4</strong> medium issues</span>
+              <span class="severity-icon severity-icon--medium"></span> <span><strong>3</strong> medium issues</span>
             </div>
             <div class="meta-count">
-              <span class="severity-icon severity-icon--low"></span> <span><strong>0</strong> low issues</span>
+              <span class="severity-icon severity-icon--low"></span> <span><strong>1</strong> low issues</span>
             </div>
           </div>
         </div>
         <div class="source-panel">
           <span class="source-panel__heading">Scan Coverage</span>
           <ul class="scan-coverage">
-            <li class="type">JavaScript files: <strong>8</strong></li><li class="type">EJS files: <strong>1</strong></li><li class="type">XML files: <strong>6</strong></li><li class="type">EJS files: <strong>3</strong></li><li class="type">HTML files: <strong>1</strong></li>
+            <li class="type">EJS files: <strong>4</strong></li><li class="type">XML files: <strong>7</strong></li><li class="type">HTML files: <strong>2</strong></li><li class="type">JavaScript files: <strong>8</strong></li>
           </ul>            
         </div>
       </div>
@@ -568,7 +568,7 @@
                   </div>
                   <ul class="card__meta">
                       <li class="card__meta__item">SNYK-CODE</li>
-                      <li class="card__meta__item">CWE-89</li>
+                      <li class="card__meta__item">CWE-943</li>
                   </ul>
               </header>
               <div class="card__section">
@@ -641,7 +641,7 @@
                   </div>
                   <ul class="card__meta">
                       <li class="card__meta__item">SNYK-CODE</li>
-                      <li class="card__meta__item">CWE-89</li>
+                      <li class="card__meta__item">CWE-943</li>
                   </ul>
               </header>
               <div class="card__section">
@@ -707,7 +707,7 @@
                   </div>
                   <ul class="card__meta">
                       <li class="card__meta__item">SNYK-CODE</li>
-                      <li class="card__meta__item">CWE-89</li>
+                      <li class="card__meta__item">CWE-943</li>
                   </ul>
               </header>
               <div class="card__section">
@@ -783,7 +783,7 @@
                   </div>
                   <div class="card__panel dataflow">
                       <h2 class="card__panel__heading"><span class="heading-char">⇣</span> Data Flow</h2>
-                      
+                      <div class="dataflow__filename"> app.js</div>
                       <div class="dataflow__item">
                           <span class="dataflow__lineno" title="line:column">75:13</span>
                           <div class="dataflow__code"><span class="dataflow__codeprefix">var token &#x3D; <br /></span><span class="marker">&#x27;SECRET_TOKEN_f8ed84e8f41e4146403dd4a6bbcea5e418d23a9&#x27;;</span><span class="dataflow__codesuffix"></span></div>
@@ -803,7 +803,7 @@
                       <div class="card__panel__markdown"><h2 id="details">Details</h2>
           <p>When constants are hardcoded into applications, this information could easily be reverse-engineered and become known to attackers. For example, if a breached authentication token is hardcoded in multiple places in the application, it may lead to components of the application remaining vulnerable if not all instances are changed.
           Another negative effect of hard-coding constants is potential unpredictability in the application&#39;s performance if the development team fails to update every single instance of the hardcoded constant throughout the code. For these reasons, hard-coding security-relevant constants is considered bad coding practice and should be remedied if present and avoided in future.</p>
-          <h3 id="best-practices-for-prevention">Best practices for prevention</h3>
+          <h2 id="best-practices-for-prevention">Best practices for prevention</h2>
           <ul>
           <li>Never hard code security-related constants; use symbolic names or configuration lookup files.</li>
           <li>As hard coding is often done by coders working alone on a small scale, examine all legacy code components and test carefully when scaling.</li>
@@ -848,7 +848,7 @@
                       <div class="card__panel__markdown"><h2 id="details">Details</h2>
           <p>Developers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.</p>
           <p>Once attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.</p>
-          <h3 id="best-practices-for-prevention">Best practices for prevention</h3>
+          <h2 id="best-practices-for-prevention">Best practices for prevention</h2>
           <ul>
           <li>Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.</li>
           <li>Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.</li>
@@ -894,60 +894,13 @@
                       <h2 class="card__panel__heading"><span class="heading-char">✓</span> Fix Analysis</h2>
                       <div class="card__panel__markdown"><h2 id="details">Details</h2>
           <p>This weakness occurs when software transmits sensitive information, such as passwords or credit card numbers, in unencrypted form. This information may then be intercepted by threat actors using sniffer tools or interception techniques such as man-in-the-middle (MITM) attacks (often involving social engineering). Attackers can then use information gleaned to perform a variety of actions, depending on the information type. Possible actions include gaining unauthorized access, impersonating a user, moving laterally within the organization&#39;s network, or retrieving and potentially modifying files. This weakness is almost completely avoidable through intelligent architecture and design.</p>
-          <h3 id="best-practices-for-prevention">Best practices for prevention</h3>
+          <h2 id="best-practices-for-prevention">Best practices for prevention</h2>
           <ul>
           <li>Build web applications around a security mindset and the awareness that sniffers may be present at any time.</li>
           <li>Ensure that all sensitive data transmission uses reliable encryption.</li>
           <li>Implement security measures so that sensitive results are never returned in plain text.</li>
           <li>Implement multiple-factor authentication methods to validate remote instances.</li>
           <li>Use SSL not only at logon but throughout communications.</li>
-          </ul>
-          </div>
-                  </div>
-              </div>
-          </div>
-          <div class="card card--vuln  disclosure--not-new severity--medium" data-snyk-test="medium">
-              <header class="card__header">
-                  <div class="card__header__main">
-                      <div class="severity-icon severity-icon--medium"></div>
-                      <h2 class="card__title">Use of Hardcoded Credentials</h2>
-                      <div class="card__actions">
-                          <span class="card__action card-dataflow is-selected" onclick="toggleCardView(event)">Data Flow</span>
-                          <span class="card__action card-fix" onclick="toggleCardView(event)">Fix Analysis</span>
-                      </div>
-                  </div>
-                  <ul class="card__meta">
-                      <li class="card__meta__item">SNYK-CODE</li>
-                      <li class="card__meta__item">CWE-798</li>
-                  </ul>
-              </header>
-              <div class="card__section">
-                  <div class="card__summary severity--medium">
-                      <p>Do not hardcode credentials in code. Found hardcoded credential used in typeorm.createConnection.</p>
-                      <div class="file-location">Found in: <strong>typeorm-db.js (line : 11)</strong></div>    
-                  </div>
-                  <div class="card__panel dataflow">
-                      <h2 class="card__panel__heading"><span class="heading-char">⇣</span> Data Flow</h2>
-                      <div class="dataflow__filename"> typeorm-db.js</div>
-                      <div class="dataflow__item">
-                          <span class="dataflow__lineno" title="line:column">6:1</span>
-                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">typeorm.createConnection(</span><span class="dataflow__codesuffix">{</span></div>
-                          <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span><span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
-                          <span class="dataflow__step">0</span>
-                      </div>
-                  </div>
-                  <div class="card__panel fix-analysis">
-                      <h2 class="card__panel__heading"><span class="heading-char">✓</span> Fix Analysis</h2>
-                      <div class="card__panel__markdown"><h2 id="details">Details</h2>
-          <p>Developers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.</p>
-          <p>Once attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.</p>
-          <h3 id="best-practices-for-prevention">Best practices for prevention</h3>
-          <ul>
-          <li>Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.</li>
-          <li>Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.</li>
-          <li>Prompt for a secure password on first login rather than hard-code a default password.</li>
-          <li>If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.</li>
-          <li>Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.</li>
           </ul>
           </div>
                   </div>
@@ -988,7 +941,54 @@
                       <div class="card__panel__markdown"><h2 id="details">Details</h2>
           <p>Developers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.</p>
           <p>Once attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.</p>
-          <h3 id="best-practices-for-prevention">Best practices for prevention</h3>
+          <h2 id="best-practices-for-prevention">Best practices for prevention</h2>
+          <ul>
+          <li>Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.</li>
+          <li>Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.</li>
+          <li>Prompt for a secure password on first login rather than hard-code a default password.</li>
+          <li>If a hardcoded password or credential must be used, limit its use, for example, to system console users rather than via the network.</li>
+          <li>Use strong hashes for inbound password authentication, ideally with randomly assigned salts to increase the difficulty level in case of brute-force attack.</li>
+          </ul>
+          </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card card--vuln  disclosure--not-new severity--low" data-snyk-test="low">
+              <header class="card__header">
+                  <div class="card__header__main">
+                      <div class="severity-icon severity-icon--low"></div>
+                      <h2 class="card__title">Use of Hardcoded Credentials</h2>
+                      <div class="card__actions">
+                          <span class="card__action card-dataflow is-selected" onclick="toggleCardView(event)">Data Flow</span>
+                          <span class="card__action card-fix" onclick="toggleCardView(event)">Fix Analysis</span>
+                      </div>
+                  </div>
+                  <ul class="card__meta">
+                      <li class="card__meta__item">SNYK-CODE</li>
+                      <li class="card__meta__item">CWE-798</li>
+                  </ul>
+              </header>
+              <div class="card__section">
+                  <div class="card__summary severity--low">
+                      <p>Do not hardcode credentials in code. Found hardcoded credential used in typeorm.createConnection.</p>
+                      <div class="file-location">Found in: <strong>typeorm-db.js (line : 11)</strong></div>    
+                  </div>
+                  <div class="card__panel dataflow">
+                      <h2 class="card__panel__heading"><span class="heading-char">⇣</span> Data Flow</h2>
+                      
+                      <div class="dataflow__item">
+                          <span class="dataflow__lineno" title="line:column">6:1</span>
+                          <div class="dataflow__code"><span class="dataflow__codeprefix"><br /></span><span class="marker">typeorm.createConnection(</span><span class="dataflow__codesuffix">{</span></div>
+                          <span class="dataflow__badge" title="Data is 'tainted' if it comes from an insecure source such as a file, the network, or the user. This tainted data is passed to a sensitive sink, as described below.">Source</span><span class="dataflow__badge" title="Sinks are the operations that must receive clean data and that you wouldn't want an attacker to be able to manipulate.">Sink</span>
+                          <span class="dataflow__step">0</span>
+                      </div>
+                  </div>
+                  <div class="card__panel fix-analysis">
+                      <h2 class="card__panel__heading"><span class="heading-char">✓</span> Fix Analysis</h2>
+                      <div class="card__panel__markdown"><h2 id="details">Details</h2>
+          <p>Developers may use hardcoded credentials for convenience when coding in order to simplify their workflow. While they are responsible for removing these before production, occasionally this task may fall through the cracks. This also becomes a maintenance challenge when credentials are re-used across multiple applications.</p>
+          <p>Once attackers gain access, they may take advantage of privilege level to remove or alter data, take down a site or app, or hold any of the above for ransom. The risk across multiple similar projects is even greater. If code containing the credentials is reused across multiple projects, they will all be compromised.</p>
+          <h2 id="best-practices-for-prevention">Best practices for prevention</h2>
           <ul>
           <li>Plan software architecture such that keys and passwords are always stored outside the code, wherever possible.</li>
           <li>Plan encryption into software architecture for all credential information and ensure proper handling of keys, credentials, and passwords.</li>

@@ -8,14 +8,14 @@ spec:
   selector: 
     matchLabels:
       app: goof-mysql
-  replicas: 1 
+  replicas: 1
   template:
     metadata:
       labels: 
         app: goof-mysql
     spec:
       containers:
-      - image: mysql:5
+      - image: mysql:latest
         imagePullPolicy: Always
         name: goof-msql
         ports:
