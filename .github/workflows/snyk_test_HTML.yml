@@ -25,20 +25,35 @@ jobs:
          sudo npm install -g snyk-to-html
          snyk auth ${SNYK_TOKEN}
 
-    # Run Snyk Open Source
+    # Run Snyk Open Source Test
     - name: Run Snyk Open Source
       run: |
-         snyk test --severity-threshold=high
+         # snyk test --severity-threshold=high
+         snyk test
       continue-on-error: true
-    #Run Snyk to HTML 
-    - name: Snyk to HTML 
+      
+    #Run Snyk Open Source to HTML 
+    - name: Snyk Open Source to HTML 
       run: |
-        snyk test --json | snyk-to-html -o results-opensource.html
+        snyk test --json | snyk-to-html -o SCAVulns.html
+
+    #Run Synk Code test
+    - name: Snyk Code test
+      run: |
+        snyk code test 
+      continue-on-error: true
+        
+    #Run Synk Code to html
+    - name: Snyk Code
+      run: |
+        snyk code test --json | snyk-to-html -o CodeVulns.html
       
     # Upload Results  
     - name: Upload HTML file
       uses: actions/upload-artifact@v4
       with:
         # Path to HTML file relative to the root of the repository
-        name: OpenSourceResults
-        path: results-opensource.html
+        name: Vulnerabilities
+        path: |
+          SCAVulns.html
+          CodeVulns.html
