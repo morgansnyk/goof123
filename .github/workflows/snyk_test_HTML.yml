@@ -36,7 +36,7 @@ jobs:
     - name: Snyk Open Source to HTML 
       run: |
         snyk test --json | snyk-to-html -o SCAVulns.html
-        snyk test --severity-threshold=high --sarif > results.sarif
+        snyk test --severity-threshold=high --sarif > SCAresults.sarif
       continue-on-error: true
 
     #Run Synk Code test
@@ -49,6 +49,7 @@ jobs:
     - name: Snyk Code
       run: |
         snyk code test --json | snyk-to-html -o CodeVulns.html
+        snyk code test --severity-threshold=high --sarif > codeResults.sarif
       
     # Store Artifact  
     - name: Upload HTML file
@@ -65,4 +66,6 @@ jobs:
       uses: github/codeql-action/upload-sarif@v3
       with:
         # Path to SARIF file relative to the root of the repository
-        sarif_file: results.sarif
+        sarif_file: | 
+          results.sarif
+          codeResults.sarif
