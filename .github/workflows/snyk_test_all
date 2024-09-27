@@ -1,0 +1,44 @@
+name: "Snyk Test"
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  Pipeline-Job:
+    # Configure Environment
+    name: 'Snyk Test'
+    runs-on: ubuntu-latest
+    env: 
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+       
+    steps:
+    # Checkout Code
+    - name: Checkout Code
+      uses: actions/checkout@v1
+
+    # Install and Authenticate to Snyk
+    - name: Install Snyk & Authenticate
+      run: |
+         sudo npm install -g snyk
+         sudo npm install -g snyk-to-html
+         snyk auth ${SNYK_TOKEN}
+
+    # Run Snyk Open Source
+    - name: Run Snyk Open Source
+      run: |
+         snyk test --severity-threshold=high
+      continue-on-error: true
+    #Run Snyk to HTML 
+    - name: Snyk to HTML 
+      run |
+        snyk test --json | snyk-to-html -o results-opensource.html
+      
+    # Upload Results  
+    - name: Upload HTML file
+      uses: actions/upload-artifact@v4
+      with:
+        # Path to HTML file relative to the root of the repository
+        name: OpenSourceResults
+        path: results-opensource.html
