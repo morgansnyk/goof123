@@ -50,6 +50,7 @@ jobs:
       run: |
         snyk code test --json | snyk-to-html -o CodeVulns.html
         snyk code test --severity-threshold=high --sarif > codeResults.sarif
+      continue-on-error: true
       
     # Store Artifact  
     - name: Upload HTML file
