@@ -11,7 +11,7 @@ jobs:
     name: 'Snyk Test'
     runs-on: ubuntu-latest
     env: 
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      SNYK_TOKEN: ${{ secrets.testOrgSnykToken }}
        
     steps:
       - uses: actions/checkout@main
@@ -27,9 +27,8 @@ jobs:
          snyk auth ${SNYK_TOKEN}
          
       - name: Open Source Monitor  
-        run: snyk monitor -d --all-projects --detection-depth=10 --org=804ea50f-4493-420a-9b6b-bfe0dbb83b5c --target-reference=test123
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          snyk monitor -d --all-projects --detection-depth=10 --org=804ea50f-4493-420a-9b6b-bfe0dbb83b5c --target-reference="test123"
           
       - name: Code Test  
         # run: snyk code test --sarif > snyk-code.sarif || true
