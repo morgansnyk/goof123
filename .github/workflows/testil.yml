@@ -24,11 +24,10 @@ jobs:
         run: |
          npm install snyk -g
          npm install snyk-to-html -g
-         snyk auth ${{secrets.SNYK_TOKEN}}
-
+         snyk auth ${SNYK_TOKEN}
          
       - name: Open Source Monitor  
-        run: snyk monitor -d --all-projects --detection-depth=10 --org=${{ secrets.SNYK_ORG }} --target-reference="main"
+        run: snyk monitor -d --all-projects --detection-depth=10 --org=732931c6-cf4e-49d3-83e4-a494892be357 --target-reference="main"
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           
